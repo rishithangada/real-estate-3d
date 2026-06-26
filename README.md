@@ -1,40 +1,36 @@
-# Real Estate 3D
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-An AI-powered real estate visualization tool that generates 3D property models and virtual walkthroughs from standard listing photos.
+## Getting Started
 
-## Overview
+First, run the development server:
 
-Agents upload listing photos. The app uses AI depth estimation and room segmentation to generate an interactive 3D model, virtual staging suggestions, and a first-person walkthrough — giving buyers a richer experience without dedicated hardware or 3D scanning equipment.
-
-## Planned Features
-
-- Photo-to-3D room reconstruction using depth estimation
-- AI virtual staging with furniture placement suggestions
-- Interactive first-person walkthrough viewer in the browser
-- Export-ready assets compatible with listing pages
-- Mobile-compatible viewer (no app install required)
-
-## Tech Stack
-
-- **Frontend:** Next.js 14, TypeScript
-- **3D Rendering:** Three.js / WebGL
-- **AI:** Computer vision for depth estimation and room segmentation
-- **Storage:** Cloud storage for processed 3D assets
-
-## Project Structure
-
-```
-real-estate-3d/
-├── app/
-│   ├── page.tsx             # Photo upload interface
-│   ├── viewer/page.tsx      # 3D walkthrough viewer
-│   └── api/process/         # Image processing pipeline
-├── components/
-│   └── ThreeViewer.tsx      # Three.js scene component
-└── lib/
-    └── reconstruction.ts    # 3D reconstruction utilities
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Status
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Planning. Part of the SPIRIT OS project portfolio.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
