@@ -6,14 +6,14 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PropVision 3D — Explore Properties in 3D",
-  description: "Immersive 3D real estate property viewer",
+  title: "Vaulted — Luxury Real Estate in 3D",
+  description: "Dark luxury real estate search with immersive 3D property tours.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
-      <body className="min-h-full bg-[#0a0a0f] text-gray-100 antialiased">{children}</body>
+      <body className="min-h-full bg-[#070706] text-stone-100 antialiased">{children}</body>
     </html>
   );
 }

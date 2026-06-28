@@ -50,7 +50,7 @@ export default function RoomViewer({ room = "living" }: { room?: RoomKey }) {
     } catch {
       const fallback = document.createElement("div");
       fallback.className = "flex h-full w-full items-center justify-center bg-[#101321] p-8 text-center";
-      fallback.innerHTML = `<div><div class="text-sm uppercase tracking-[0.24em] text-indigo-300">3D preview unavailable</div><div class="mt-3 text-3xl font-bold text-white">${preset.label}</div><div class="mt-3 max-w-sm text-sm leading-6 text-gray-400">Your browser could not create a WebGL context. The room selector and property details are still available.</div></div>`;
+      fallback.innerHTML = `<div><div class="text-sm uppercase tracking-[0.24em] text-amber-100">3D preview unavailable</div><div class="mt-3 text-3xl font-bold text-white">${preset.label}</div><div class="mt-3 max-w-sm text-sm leading-6 text-stone-400">Your browser could not create a WebGL context. The room selector and property details are still available.</div></div>`;
       el.appendChild(fallback);
       return () => {
         if (el.contains(fallback)) el.removeChild(fallback);
@@ -260,7 +260,7 @@ export default function RoomViewer({ room = "living" }: { room?: RoomKey }) {
     if (ctx) {
       ctx.fillStyle = "rgba(8, 12, 22, 0.82)";
       ctx.fillRect(0, 0, 512, 128);
-      ctx.fillStyle = "#c7d2fe";
+      ctx.fillStyle = "#fef3c7";
       ctx.font = "bold 42px Arial";
       ctx.fillText(preset.label, 30, 78);
       const texture = new THREE.CanvasTexture(labelCanvas);
